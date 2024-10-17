@@ -7,14 +7,14 @@
 
 ### Db Models
  
- ### Student
+ ### => Student
  - Student id
  - Student firstname
  - Student lastname
  - Student email
  - Student Password
 
- ### Instructor
+ ### => Instructor
  - Instructor id
  - Instructor firstname
  - Instrucutor lastname
@@ -22,7 +22,7 @@
  - Instrucutor Password
  
 
- ### Course
+ ### => Course
  - Course id
  - Course name
  - Course description
@@ -30,7 +30,7 @@
  - Course author
 
 
- ### Approver
+ ### => Approver
  - Approver id
  - Approver firstname
  - Approver lastname
