@@ -2,6 +2,7 @@ from flask import Flask, render_template,request
 from flask_sqlalchemy import SQLAlchemy
 from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
+from werkzeug.security import check_password_hash,generate_password_hash
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 
 app = Flask(__name__)
@@ -70,8 +71,9 @@ def student_register():
        lname= request.form.get('lname')
        email= request.form.get('email')
        pwd= request.form.get('password')
+       hashed_student_password = generate_password_hash(pwd)
 
-       new_student = Students(st_fname=fname,st_lname=lname,st_email=email,st_password=pwd)
+       new_student = Students(st_fname=fname,st_lname=lname,st_email=email,st_password=hashed_student_password)
        db.session.add(new_student)
        db.session.commit()
 
@@ -96,7 +98,9 @@ def instructor_register():
        ins_email= request.form.get('email')
        ins_pwd= request.form.get('password')
 
-       new_student = Instructors(ins_fname=ins_fname,ins_lname=ins_lname,ins_email=ins_email,ins_password=ins_pwd)
+       hashed_instructor_password = generate_password_hash(ins_pwd)
+
+       new_student = Instructors(ins_fname=ins_fname,ins_lname=ins_lname,ins_email=ins_email,ins_password=hashed_instructor_password)
        db.session.add(new_student)
        db.session.commit()
      return render_template("instructor_register.html")

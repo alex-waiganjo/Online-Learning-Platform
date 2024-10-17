@@ -42,5 +42,12 @@
  - Html,Css,Bootstap and Js
  - DB: Sqlite
 
+#### Implementations
+ - Code Structureand Organization✅
+ - Password Hashing ✅ 
+ - Database mapping✅
+ - Documentation✅
+ - Code Comments✅
+
 
 
