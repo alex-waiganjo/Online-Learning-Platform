@@ -134,24 +134,20 @@ nav a {
     color: #333;
     margin-bottom: 10px;
 }
-
-
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome, [Instructor Name]!</h1>
+        <h1>Welcome, {Instructor Name}</h1>
     </header>
 
     <section class="course-browsing">
-        <h2>Add New Courses</h2>
-        
-       
+        <h2>Add New Courses</h2>   
     </section>
     <!-- Course boxes (sample data) -->
     <button id="centered-container" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add New Course</button>
-    
-    
+  
+    <!-- Add Course  -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -187,18 +183,19 @@ nav a {
       </div>
     </div>
 
+
     <section class="profile">
         <h2>Your Profile</h2>
-        <img src="profile-pic.jpg" alt="Profile Picture">
-        <p><strong>Name:</strong> [Student Name]</p>
-        <p><strong>Email:</strong> [Student Email]</p>
-        <p><strong>Bio:</strong> [Student Bio]</p>
+        <img src="sql.png" alt="Profile Picture">
+        <p><strong>Name:</strong> [Instructor Name]</p>
+        <p><strong>Email:</strong> [Instructor Email]</p>
+        <p><strong>Bio:</strong> [Instructor Bio]</p>
         <a href="#">Edit Profile</a>
     </section>
 
     <section class="enrollment-summary">
-        <h2>Enrollment Summary</h2>
-        <p>You are enrolled in <strong>5 courses</strong>.</p>
+        <h2>Courses Published</h2>
+        <p>You Have Published:  <strong>{ no of courses }</strong>.</p>
         <!-- Progress bars or other visual indicators for each course -->
     </section>
 
