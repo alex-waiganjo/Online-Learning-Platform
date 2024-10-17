@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Student Dashboard</title>
+    <style>
+        /* styles.css */
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Header styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Course browsing section styles */
+.course-browsing {
+    padding: 20px;
+    text-align: center;
+}
+
+.course-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.course-box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.course-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.course-box p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.course-box a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.course-box a:hover {
+    background-color: #0056b3;
+}
+
+/* Profile section styles */
+.profile {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.profile a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Enrollment summary styles */
+.enrollment-summary {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+.enrollment-summary p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome, [Student Name]!</h1>
+    </header>
+
+    <section class="course-browsing">
+        <h2>Available Courses</h2>
+        <!-- Course boxes (sample data) -->
+        <div class="course-box">
+            <img src="course1.jpg" alt="Course Image">
+            <h3>Introduction to Python</h3>
+            <p>Instructor: John Doe</p>
+            <p>Learn Python basics and programming concepts.</p>
+            <a href="#">Enroll</a>
+        </div>
+        <!-- Repeat for other courses -->
+    </section>
+
+    <section class="profile">
+        <h2>Your Profile</h2>
+        <img src="profile-pic.jpg" alt="Profile Picture">
+        <p><strong>Name:</strong> [Student Name]</p>
+        <p><strong>Email:</strong> [Student Email]</p>
+        <p><strong>Bio:</strong> [Student Bio]</p>
+        <a href="#">Edit Profile</a>
+    </section>
+
+    <section class="enrollment-summary">
+        <h2>Enrollment Summary</h2>
+        <p>You are enrolled in <strong>5 courses</strong>.</p>
+        <!-- Progress bars or other visual indicators for each course -->
+    </section>
+
+    <!-- <footer>
+        <p>© 2024 E-Learning Platform</p>
+    </footer> -->
+</body>
+</html>

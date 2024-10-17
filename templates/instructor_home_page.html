@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Student Dashboard</title>
+    <style>
+        /* styles.css */
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Header styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Course browsing section styles */
+.course-browsing {
+    padding: 20px;
+    text-align: center;
+}
+
+.course-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.course-box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.course-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.course-box p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.course-box a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.course-box a:hover {
+    background-color: #0056b3;
+}
+
+/* Profile section styles */
+.profile {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.profile a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Enrollment summary styles */
+.enrollment-summary {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+.enrollment-summary p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome, [Instructor Name]!</h1>
+    </header>
+
+    <section class="course-browsing">
+        <h2>Add New Courses</h2>
+        
+       
+    </section>
+    <!-- Course boxes (sample data) -->
+    <button id="centered-container" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add New Course</button>
+    
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add New Course</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+                
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Course Name:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Course Description:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Course Image:</label>
+                <input type="file" class="form-control" id="recipient-name">
+              </div>              
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="profile">
+        <h2>Your Profile</h2>
+        <img src="profile-pic.jpg" alt="Profile Picture">
+        <p><strong>Name:</strong> [Student Name]</p>
+        <p><strong>Email:</strong> [Student Email]</p>
+        <p><strong>Bio:</strong> [Student Bio]</p>
+        <a href="#">Edit Profile</a>
+    </section>
+
+    <section class="enrollment-summary">
+        <h2>Enrollment Summary</h2>
+        <p>You are enrolled in <strong>5 courses</strong>.</p>
+        <!-- Progress bars or other visual indicators for each course -->
+    </section>
+
+    <!-- <footer>
+        <p>© 2024 E-Learning Platform</p>
+    </footer> -->
+</body>
+</html>
